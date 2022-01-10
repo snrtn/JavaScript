@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+  <title>for function</title>
+</head>
+
+<body>
+  <script>
+    function mulPrintf() {
+      for (var i = 2; i <= 9; i++) {
+        document.write(i + "th" + "<br/>")
+        for (var j = 1; j <= 9; j++) {
+          document.write(i + " * " + j + " = " + (i * j) + "<br/>");
+        }
+        document.write("<br/>");
+      }
+    }
+
+    //function = réutiliser le code
+    mulPrintf();
+    mulPrintf();
+    mulPrintf();
+  </script>
+</body>
+
+</html>

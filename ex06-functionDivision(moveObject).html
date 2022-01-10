@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+  <title>functionDivision moveObject</title>
+
+  <style>
+    #panel {
+      width: 600px;
+      height: 500px;
+      border: 1px solid #000;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #object {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #333;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #nav {
+      width: 600px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div id="panel">
+      <div id="object"></div>
+    </div>
+
+    <div id="nav">
+      <label>X = max100</label>
+      <input id="textX" />
+      <br />
+      <label>Y = max100</label>
+      <input id="textY" />
+      <br />
+      <button id="btnStart">GOGOGO</button>
+    </div>
+  </div>
+
+
+  <script>
+    // global variable
+    var object = null; // pour Dummy Variable
+
+    // start
+    document.addEventListener("DOMContentLoaded", function () {
+      initialize();
+      event();
+    });
+
+    // global variable reset
+    function initialize() {
+      object = document.getElementById("object"); // chercher object
+    }
+
+    // event function
+    function event() {
+      var btn = document.getElementById("btnStart"); // chercher btn
+      btn.addEventListener('click', function () {
+        // prendre valeur x, y
+        var x = parseInt(document.getElementById("textX").value);
+        var y = parseInt(document.getElementById("textY").value);
+        move(x, y); // donner paramètre
+      });
+    }
+
+    // action
+    function move(x, y) {
+      if ((x >= 0 && x <= 100) && (y >= 0 && y <= 100)) {
+        object.style.top = x + "%";
+        object.style.left = y + "%";
+      } else {
+        alert("ne marche pas value");
+      }
+    }
+  </script>
+</body>
+
+</html>
