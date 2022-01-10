@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+  <title>local variabl / global variable</title>
+</head>
+
+<body>
+  <script>
+    // global variable : partout
+    // local variabl : dans le bloc
+
+    var name = "global"; //global variable & reset
+
+    function func1() {
+      var name = "local1"; //local variable
+      document.write("name = " + name + "<br/>");
+    }
+
+    function func2() {
+      var name = "local2"; //local variable
+      document.write("name = " + name + "<br/>");
+    }
+
+    function func3() {
+      name = "local3"; //local variable => global variable & reset
+      document.write("name = " + name + "<br/>");
+      //
+    }
+
+    document.write("name = " + name + "<br/>") //global variable
+    func1() //local variable
+    func2() //local variable
+    func3() //local variable => global variable & reset
+    document.write("name = " + name + "<br/>") //global variable
+  </script>
+</body>
+
+</html>

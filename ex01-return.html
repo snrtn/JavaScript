@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+  <title>return</title>
+</head>
+
+<body>
+  <script>
+    function sum() {
+      var sum = 0;
+      var count = 1;
+
+      while (true) {
+        var num = parseInt(window.prompt("number : ", 1));
+        if (num == 0) {
+          document.write("close");
+          return;
+        }
+        sum += num;
+        document.write(count + ". " + sum + "<br/>");
+        count++;
+      }
+    }
+    sum();
+  </script>
+</body>
+
+</html>
