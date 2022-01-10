@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Document</title>
+  <style>
+    div.image-container {
+      position: relative;
+    }
+
+    div.image-container div {
+      width: 100px;
+      height: 100px;
+      background-color: #000000;
+      border-radius: 50%;
+      left: 100px;
+      top: 100px;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btnStart">START</button>
+  <div class="image-container" id="container1">
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+    <div class="ph"></div>
+  </div>
+
+  <script>
+    var images = null;
+
+    document.addEventListener("DOMContentLoaded", function () {
+      init();
+      initEvent();
+    });
+
+    function init() {
+      images = document.getElementsByClassName("ph");
+    }
+
+    function initEvent() {
+      var btn = document.getElementById("btnStart");
+      btn.addEventListener("click", function () {
+        showImage();
+      });
+    }
+
+    function showImage() {
+      var items = images.length;
+      var colorCode = "#" + Math.round(Math.random() * 0xffffff).toString(16)
+      for (var i = 0; i < items; i++) {
+        var img = images[i];
+        var x = 100 + ((i % 3) * 200);
+        var y = 100 + (parseInt(i / 3) * 200);
+        img.style.top = y + "px";
+        img.style.left = x + "px";
+        img.style.backgroundColor = colorCode;
+      }
+    }
+  </script>
+</body>
+
+</html>
