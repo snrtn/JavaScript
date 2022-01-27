@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    tabMenu(document.getElementById('tabmenu1'));
+    tabMenu(document.getElementById('tabmenu1'), onCelectItem);
 });
-function tabMenu(seletor) {
+function tabMenu(seletor, callback) {
     var tabMenu = null;
     var menuItems = null;
     var selectedMenuItem = null;
@@ -21,8 +21,10 @@ function tabMenu(seletor) {
             selectedMenuItem.classList.remove('select');
         }
         selectedMenuItem = item;
-        console.log(selectedMenuItem);
         selectedMenuItem.classList.add('select');
+        if (callback != null) {
+            callback(selectedMenuItem.index());
+        }
     }
     init(seletor);
     initEvent();
