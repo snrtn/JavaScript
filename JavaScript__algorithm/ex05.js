@@ -1,7 +1,7 @@
 function solution(arr) {
-  let answer,
-    min = Number.MAX_SAFE_INTEGER;
-  for (let i = 0; i < arr.length; i++) {
+  let answer;
+  let min = Number.MAX_SAFE_INTEGER;
+  for (let i = 0; i < arr.lenght; i++) {
     if (arr[i] < min) min = arr[i];
   }
   answer = min;

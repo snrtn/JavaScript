@@ -1,6 +1,6 @@
 function solution(arr) {
-  let answer = Math.min.apply(null, arr);
-  console.log(Math.max.apply(null, arr));
+  let answer = Math.min(...arr);
+  console.log(Math.max(...arr));
 
   return answer;
 }
