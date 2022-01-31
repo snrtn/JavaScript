@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+  <title>callbackFunction</title>
+  <script src="./main.js"></script>
+  <style>
+    #panel {
+      width: 600px;
+      height: 300px;
+      border: 2px solid #999;
+      position: relative;
+    }
+
+    #bar {
+      position: absolute;
+      left: 50px;
+      top: 190px;
+      width: 500px;
+      height: 20px;
+      background: #f00;
+    }
+
+    #fish {
+      position: absolute;
+      left: 50px;
+      top: 120px;
+      transition: all linear 0.1s;
+    }
+
+    #nav {
+      text-align: center;
+      width: 600px;
+      margin-top: 20px;
+    }
+
+    #btnStart,
+    #btnStop {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+  <div>
+    <div id="panel">
+      <div id="bar"></div>
+      <img src="images/fish1.png" id="fish">
+    </div>
+    <div id="nav">
+      <button id="btnStart">시작</button>
+      <button id="btnStop">멈춤</button>
+    </div>
+  </div>
+</body>
+
+</html>
