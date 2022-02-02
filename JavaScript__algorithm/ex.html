@@ -6,7 +6,32 @@
 </head>
 
 <body>
-  <script>
+
+
+  <script type="text/javascript">
+    //자바스크립트상에서 가장 가까운값
+
+    //[!] 가까운값 : 차이값의 절대값의 최소값일 때의 데이터
+    //[1] Input
+    var data = [10, 15, 20, 25, 30];
+    var target = 21; //21과 가까운값
+    var near = 0;
+    var abs = 0; //여기에 '20' 값이 들어감
+    var min = 100; //해당 범위에서 가장 큰 값
+
+    //[2] Process
+    for (var i = 0; i < data.length; i++) {
+      abs = ((data[i] - target) < 0) ? -(data[i] - target) :
+        (data[i] - target);
+
+      if (abs < min) {
+        min = abs; //MIN
+        near = data[i] //near : 가까운값
+      }
+    }
+
+    //[3] Output
+    document.write(target + "가까운값 : " + near + "<br/>");
   </script>
 </body>
 
