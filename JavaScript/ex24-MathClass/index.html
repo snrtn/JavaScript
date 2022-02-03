@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+  <title>callbackFunction</title>
+  <script src="./main.js"></script>
+  <style>
+  </style>
+  <style>
+    #start {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 180px;
+    }
+
+    #socreText {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    #score {
+      font-size: 20px;
+      font-weight: bold;
+      color: red;
+      margin-left: 10px;
+    }
+
+    .panel {
+      width: 600px;
+      height: 400px;
+      position: relative;
+      border: 2px solid blue;
+      margin-top: 20px;
+    }
+
+    .panel #fish {
+      position: absolute;
+      left: 240px;
+      top: 165px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <button id="start">Start</button>
+    <span id="socreText">Score : </span>
+    <span id="score">0</span>
+  </div>
+  <div class="panel">
+    <img src="images/fish1.png" id="fish">
+  </div>
+</body>
+
+</html>
