@@ -1,6 +1,6 @@
 let fish: HTMLElement = null;
 let step: number = 50;
-let timerID: number = 0;
+let timerID: any = 0;
 
 document.addEventListener('DOMContentLoaded', function () {
   init();

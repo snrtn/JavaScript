@@ -2,7 +2,7 @@ let cnt1: number = 0;
 let score1: any = null;
 let fish1: HTMLElement = null;
 let play1: boolean = false;
-let timerID1: number = 0;
+let timerID1: any = 0;
 
 document.addEventListener('DOMContentLoaded', function () {
   init1();
