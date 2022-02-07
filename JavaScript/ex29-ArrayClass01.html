@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array split()</title>
+  <style>
+    #menu {
+      list-style: none;
+      height: 50px;
+      padding: 20px;
+    }
+
+    #menu li {
+      display: block;
+      float: left;
+      padding: 10px;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+  </style>
+  <script src="../libs/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var $menu = $("#menu");
+      var menuData = "home,about,contact";
+      var menuItems = menuData.split(",");
+
+      for (var i = 0; i < menuItems.length; i++) {
+        var newItem = "<li>" + menuItems[i].toUpperCase() + "</li>";
+
+        $menu.append(newItem);
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <ul id="menu">
+  </ul>
+</body>
+
+</html>
