@@ -1,11 +1,16 @@
-function sum(num1, num2) {
-  return num1 + num2;
+function sum(arr) {
+  let answer = 1,
+    max = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      answer++;
+      max = arr[i];
+    }
+  }
+  return answer;
 }
 
-if (0) {
-  console.log('this is truthy');
-} else {
-  console.log('this is falsey');
-}
+let arr = [130, 135, 148, 140, 145, 150, 150, 153];
+// console.log(solution(arr));
 
 module.exports = sum;

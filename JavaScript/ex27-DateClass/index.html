@@ -20,25 +20,14 @@
       cursor: pointer;
     }
   </style>
-  <script src="../libs/jquery-3.5.1.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      var $menu = $("#menu");
-      var menuData = "home,about,contact";
-      var menuItems = menuData.split(",");
-
-      for (var i = 0; i < menuItems.length; i++) {
-        var newItem = "<li>" + menuItems[i].toUpperCase() + "</li>";
-
-        $menu.append(newItem);
-      }
-    });
-  </script>
+  <script src="../../libs/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
   <ul id="menu">
   </ul>
+
+  <script src="./fc-date.js"></script>
 </body>
 
 </html>
